@@ -50,9 +50,7 @@ services:
       - servidor
 
   # ✍️ Parte C: aquí va el servicio web
-
-
-  web:
+    web:
     build: web
     container_name: sad-p1-web
     hostname: web

@@ -11,12 +11,15 @@
 #   - Los grupos van en ou=groups. Mira en el enunciado cómo es un grupo.
 #   - En "member" va el DN COMPLETO de la persona, no solo s
 # Tu usuario
+
+# --- TU USUARIO ---
 dn: uid=alfon,ou=people,dc=securecorp,dc=local
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
-cn: Alfonso Roman
+cn: alfon
 sn: Roman
+givenName: alfon
 uid: alfon
 uidNumber: 10001
 gidNumber: 10001
@@ -24,13 +27,14 @@ homeDirectory: /home/alfon
 loginShell: /bin/bash
 mail: alfon@securecorp.local
 
-# Marta Torres
+# --- MARTA TORRES ---
 dn: uid=mtorres,ou=people,dc=securecorp,dc=local
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
 cn: Marta Torres
 sn: Torres
+givenName: Marta
 uid: mtorres
 uidNumber: 10003
 gidNumber: 10003
@@ -38,16 +42,15 @@ homeDirectory: /home/mtorres
 loginShell: /bin/bash
 mail: mtorres@securecorp.local
 
-# Grupo rrhh (Lucia y Marta)
+# --- GRUPO RRHH ---
 dn: cn=rrhh,ou=groups,dc=securecorp,dc=local
 objectClass: groupOfNames
 cn: rrhh
 member: uid=lromero,ou=people,dc=securecorp,dc=local
 member: uid=mtorres,ou=people,dc=securecorp,dc=local
 
-# Grupo sistemas (tú)
+# --- GRUPO SISTEMAS ---
 dn: cn=sistemas,ou=groups,dc=securecorp,dc=local
 objectClass: groupOfNames
 cn: sistemas
 member: uid=alfon,ou=people,dc=securecorp,dc=local
-
